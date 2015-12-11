@@ -62,6 +62,7 @@ h1{
 .content{
   border: 2px solid #dadada;
   padding: 10px;
+  min-height: 80vh;
 }
 
 /*FOOTER STYLES*/
