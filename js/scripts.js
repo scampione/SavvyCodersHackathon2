@@ -4,6 +4,7 @@
 var book1 = {
   id: 'book_1',
   name: 'The Count of Monte Cristo',
+  price: '$18.44',
   category: 'Revenge',
   picture_url: 'http://myhero.com/images/guest/g39740/hero35269/g39740_u37232_Count_of_Monte_Cristo.jpg',
   selling_points: ['Grand old yarn of revenge', 'Written by a guy named Alex', 'Starring Jim Caveziel'],
@@ -12,6 +13,7 @@ var book1 = {
 var book2 = {
   id: 'book_2',
   name: 'Spice World: The Novelization',
+  price: 'priceless',
   category: 'Girl Power',
   picture_url: 'http://ecx.images-amazon.com/images/I/91sm%2BCaAN6L._SL1500_.jpg',
   selling_points: ['Pinnacle of the written English word', 'Starring Victoria Beckham', 'Also starring some other gals'],
@@ -20,6 +22,7 @@ var book2 = {
 var album1 = {
   id: 'album_1',
   name: 'Freedom of Choice',
+  price: '$19.80',
   category: 'SynthPop',
   picture_url: 'http://assets.rollingstone.com/assets/images/album_review/09eeabdb3413f8a6b138ecd9edbcfbd4245b2e42.jpg',
   selling_points: ['You MUST whip it', 'Top-tier headgear', 'Best bass line ever'],
@@ -28,6 +31,7 @@ var album1 = {
 var album2 = {
   id: 'album_2',
   name: 'Everybody POLKA!',
+  price: '$6.66',
   category: 'Progressive Melodic Death Metal',
   picture_url: 'http://www.simoneventmanagement.com/content/exhibiting/everybody%20polka.jpg',
   selling_points: ['Brutal Riffs', 'Gruesome lyrics', 'Songs about beer!'],
@@ -50,13 +54,14 @@ var add_to_page = function (item) {
   };
 
   //set up jQuery for each object property
-  var name = $('<div class="name">').text(item.name);
-  var category = $('<div class="category">').text(item.category);
+  var name = $('<div class="name">').html('<h3>'+item.name+'</h3>');
+  var price = $('<div class="price">').html('<h4>'+item.price+'</h4>');
+  var category = $('<div class="category">').html("<p>KEYWORDS: "+item.category+"</p>");
   var pic = $('<div class="pic">').html($('<img src="'+item.picture_url+'" alt="'+item.name+'">'));
   var sp = $('<div class="selling_points">').html($('<ul></ul>')).html(sp_lister(item.selling_points));
 
   //add all content to the page
-  $('.content').append($('<div id="'+item.id+'">').html(name).append(category).append(pic).append(sp));
+  $('.content').append($('<div id="'+item.id+'">').html(pic).append(name).append(price).append(category).append(sp));
 };
 
 //create function to show books or music

@@ -63,7 +63,48 @@ h1{
   border: 2px solid #dadada;
   padding: 10px;
   min-height: 80vh;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
+
+.content>div{
+  position: relative;
+  margin: 5em;
+  max-width: 20vw;
+}
+
+.content img{
+  width: 15vw;
+  height: auto;
+}
+
+.content .price {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 5em;
+  height: 5em;
+
+  color: #adadad;
+  background-color: #ffffff;
+  border: 2px solid #dadada;
+  border-radius: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .category{
+  color: #adadad
+}
+
+
 
 /*FOOTER STYLES*/
 .links{
