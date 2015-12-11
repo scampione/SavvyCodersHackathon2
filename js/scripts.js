@@ -17,6 +17,14 @@ var book2 = {
   selling_points: ['Pinnacle of the written English word', 'Starring Victoria Beckham', 'Also starring some other gals'],
   type: 'book'
 };
+var book3 = {
+  id: 'book_3',
+  name: 'Moon People',
+  category: 'Ironically Bad Sci-Fi',
+  picture_url: 'http://litreactor.com/sites/default/files/images/column/2012/09/moon-people-cover.jpeg',
+  selling_points: ['Nadir of the written English word', 'Best Amazon Reviews Ever', 'Seriously, check out the Amazon reviews.'],
+  type: 'book'
+};
 var album1 = {
   id: 'album_1',
   name: 'Freedom of Choice',
@@ -35,7 +43,7 @@ var album2 = {
 };
 
 //category arrays
-var books = [book1, book2];
+var books = [book1, book2, book3];
 var music = [album1, album2];
 
 //full products array
