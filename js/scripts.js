@@ -56,9 +56,11 @@ var products = [books, music];
 
 //add_to_page function, with an object passed in as a parameter
 var add_to_page = function (item_arr) {
+
+  //extract item objects from the item_arr array of items, then continue with rest of function
   for(var j = 0; j < item_arr.length; j++ ){
-    //extract item objects from the item_arr array of items
     var item = item_arr[j];
+
     //create function that takes an array and returns a set of HTML list objects through jQuery
     var sp_lister = function(array) {
       //set up first element of list
@@ -80,8 +82,8 @@ var add_to_page = function (item_arr) {
 
     //add all content to the page
     $('.content').append($('<div id="'+item.id+'">').html(pic).append(name).append(price).append(category).append(sp));
-  };
-
+  }
+};
 
 //content function to show books or music
 var content = function () {
@@ -96,7 +98,7 @@ var content = function () {
     add_to_page(books);
     add_to_page(music);
   }
-}
+};
 
 //Add click event handlers that show books or music
 $('nav').on('click','a', content);
