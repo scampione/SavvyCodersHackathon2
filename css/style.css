@@ -4,4 +4,99 @@ html {
   box-sizing: border-box;
 }
 
+body{
+  margin: 0;
+  font-family: 'Helvetica', sans-serif;
+}
+
 /*put all other styles below this line, please*/
+
+/*NAVIGATION BAR STYLES*/
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  height: 50px;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+
+  background-color: #adadad;
+  color: #dadada;
+}
+
+nav ul{
+  list-style-type: none;
+}
+
+nav li{
+  display: inline;
+  margin-right: 50px;
+}
+
+nav a{
+  text-decoration: none;
+  color: inherit;
+}
+
+nav a:hover{
+  color: #ffffff;
+}
+
+/*FOOTER CONTENT STYLES*/
+footer{
+  height: 30vh;
+  width: 100vw;
+  background-color: #adadad;
+  color: #dadada;
+}
+
+/*HEADER STYLES*/
+h1{
+  padding: 20px;
+  text-align: center;
+}
+
+/*CONTENT STYLES*/
+.content{
+  border: 2px solid #dadada;
+  padding: 10px;
+  min-height: 80vh;
+}
+
+/*FOOTER STYLES*/
+.links{
+  padding-top: 10vh;
+  width: 49%;
+  text-align: center;
+  display: inline-block;
+}
+.links ul{
+  list-style-type: none;
+  width: 100%;
+}
+.links li{
+  margin: 5px 0;
+
+}
+.links a{
+  color: inherit;
+  text-decoration: none;
+}
+.links a:hover{
+  color: #ffffff;
+}
+/*WRAPPER AND CONTAINER STYLES*/
+.container{
+  width: 90vw;
+  max-width: 960px;
+
+  margin: 50px auto;
+  padding: 0;
+}
+
+.wrapper{
+  max-width: 960px;
+  margin: 0 auto;
+}
