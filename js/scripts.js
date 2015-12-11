@@ -34,29 +34,39 @@ var album2 = {
   type: 'music'
 };
 
+//category arrays
+var books = [book1, book2];
+var music = [album1, album2];
+
+//full products array
+var products = [books, music];
+
 //add_to_page function, with an object passed in as a parameter
-var add_to_page = function (item) {
+var add_to_page = function (item_arr) {
+  for(var j = 0; j < item_arr.length; j++ ){
+    //extract item objects from the item_arr array of items
+    var item = item_arr[j];
+    //create function that takes an array and returns a set of HTML list objects through jQuery
+    var sp_lister = function(array) {
+      //set up first element of list
+      var list = $('<li>'+array[0]+'</li>');
+      //.append() subsequent elements from the list
+      for(var i = 1; i < array.length; i++){
+        list = list.append($('<li>'+array[i]+'</li>'));
+      }
+      //return the full jQuery command
+      return list;
+    };
 
-  //create function that takes an array and returns a set of HTML list objects through jQuery
-  var sp_lister = function(array) {
-    //set up first element of list
-    var list = $('<li>'+array[0]+'</li>');
-    //.append() subsequent elements from the list
-    for(var i = 1; i < array.length; i++){
-      list = list.append($('<li>'+array[i]+'</li>'));
-    }
-    //return the full jQuery command
-    return list;
-  };
+    //set up jQuery for each object property
+    var name = $('<div class="name">').text(item.name);
+    var category = $('<div class="category">').text(item.category);
+    var pic = $('<div class="pic">').html($('<img src="'+item.picture_url+'" alt="'+item.name+'">'));
+    var sp = $('<div class="selling_points">').html($('<ul></ul>')).html(sp_lister(item.selling_points));
 
-  //set up jQuery for each object property
-  var name = $('<div class="name">').text(item.name);
-  var category = $('<div class="category">').text(item.category);
-  var pic = $('<div class="pic">').html($('<img src="'+item.picture_url+'" alt="'+item.name+'">'));
-  var sp = $('<div class="selling_points">').html($('<ul></ul>')).html(sp_lister(item.selling_points));
-
-  //add all content to the page
-  $('.content').append($('<div id="'+item.id+'">').html(name).append(category).append(pic).append(sp));
+    //add all content to the page
+    $('.content').append($('<div id="'+item.id+'">').html(name).append(category).append(pic).append(sp));
+  }
 };
 
 //create function to show books or music
@@ -65,16 +75,12 @@ var content = function () {
   $('.content').empty();
   //set up items to show based on text content of each link
   if($(this).text() === 'books'){
-    add_to_page(book1);
-    add_to_page(book2);
+    add_to_page(books)
   } else if ($(this).text() === 'music') {
-    add_to_page(album1);
-    add_to_page(album2);
+    add_to_page(music);
   } else if ($(this).text() === 'all' || 'HOME'){
-    add_to_page(book1);
-    add_to_page(book2);
-    add_to_page(album1);
-    add_to_page(album2);
+    add_to_page(books);
+    add_to_page(music);
   }
 }
 
