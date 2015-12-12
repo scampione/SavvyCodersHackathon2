@@ -106,7 +106,7 @@ $('footer').on('click','a', content);
 
 //add hover event handler for dropdown menu
 $('.drop').hover(function(){
-  $(this).siblings('ul').slideDown(300);
+  $(this).children('ul').slideDown(300);
 },function(argument){
-  $(this).siblings('ul').slideUp(300);
+  $(this).children('ul').slideUp(300);
 });

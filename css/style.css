@@ -56,7 +56,7 @@ nav a:hover{
   color: #000000;
 }
 
-nav .drop{
+nav button{
   margin: 1em 2.75em;
   padding: 3px;
 
@@ -71,7 +71,7 @@ nav .drop{
   color: #dadada;
 }
 
-nav .drop:hover{
+nav button:hover{
   color: #000000;
 }
 /*FOOTER CONTENT STYLES*/
