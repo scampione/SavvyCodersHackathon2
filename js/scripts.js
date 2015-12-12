@@ -46,13 +46,32 @@ var album2 = {
   selling_points: ['Brutal Riffs', 'Gruesome lyrics', 'Songs about beer!'],
   type: 'music'
 };
+var lightsaber1 = {
+  id: 'lightsaber_1',
+  name: 'Mace Windu Saber',
+  price: '1000 Republic Credits',
+  category: 'Jedi Saber',
+  picture_url: 'http://www.bladeseller.com/MasterReplicas/images/black/Mace%20lightsaber.jpg',
+  selling_points: ['purple!','Samuel L. Jackson', 'Mix of Light and Dark Force Powers'],
+  type: 'lightsaber'
+};
+var lightsaber2 = {
+  id: 'lightsaber_2',
+  name: 'Kylo Ren Claymore',
+  price: '1000 New Republic Credits',
+  category: 'Knight of Ren Saber',
+  picture_url: 'https://i.ytimg.com/vi/LDm0EGNhWIo/hqdefault.jpg',
+  selling_points: ['Hilt/Exhaust Ports','Now with MORE MENACING sound!', 'Might Explode at any moment'],
+  type: 'lightsaber'
+};
 
 //category arrays
 var books = [book1, book2, book3];
 var music = [album1, album2];
+var lightsabers = [lightsaber1, lightsaber2];
 
 //full products array
-var products = {books, music};
+var products = {books, music, lightsabers};
 
 //create function that takes an array and returns a set of HTML list objects through jQuery
 var sp_lister = function(array) {
@@ -90,13 +109,13 @@ var content = function () {
   //remove existing content from the content div
   $('.content').empty();
   //set up items to show based on text content of each link
-  if($(this).text() === 'books'){
-    add_to_page(products.books)
-  } else if ($(this).text() === 'music') {
-    add_to_page(products.music);
-  } else if ($(this).text() === 'all' || 'HOME'){
-    add_to_page(products.books);
-    add_to_page(products.music);
+  var item = $(this).text();
+  if(item === 'all'){
+    for(var i in products){
+      add_to_page(products[i]);
+    }
+  } else {
+    add_to_page(products[item]);
   }
 };
 
@@ -104,10 +123,10 @@ var content = function () {
 var drop_lister = function (prod_obj) {
   var item_arr = Object.keys(prod_obj);
   //set up first element of list
-  var list = $('<li><a href="#">'+item_arr[0]+'</a></li>');
+  var list = '<li><a href="#">all</a></li>';
   //.append() subsequent elements from the list
-  for(var i = 1; i < item_arr.length; i++){
-    list = list.append($('<li><a href="#">'+item_arr[i]+'</a></li>'));
+  for(var i = 0; i < item_arr.length; i++){
+    list += '<li><a href="#">'+item_arr[i]+'</a></li>';
   }
   //drop the list into the .drop class with jQuery
   $('.drop').children('ul').html(list);
