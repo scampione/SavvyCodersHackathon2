@@ -165,6 +165,7 @@ $('form').submit(function(){
 
     var input = $(this).children('input[type=text]').val();
     var names = name_scraper(products);
+
     var all = [];
     var all_scraper = function(obj){
       for(var type in obj){
@@ -176,8 +177,6 @@ $('form').submit(function(){
     };
     all_scraper(products);
 
-
-    console.log(all);
     if(input !== ''){
       var target_arr = [];
       for(var i=0; i < names.length; i++){
@@ -192,6 +191,9 @@ $('form').submit(function(){
           });
         }
       }
+      
+      //remove existing content from the content div
+      $('.content').empty();
       add_to_page(target_arr)
     }
 
