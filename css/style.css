@@ -99,17 +99,29 @@ h1{
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
-.content>div{
-  position: relative;
-  margin: 5em;
-  max-width: 20vw;
+@media screen and (max-width:687px){
+  .content>div{
+    position: relative;
+    margin: 5em;
+    max-width: 80vw;
+  }
+  .content img{
+    width: 35vw;
+    height: auto;
+  }
+}
+@media screen and (min-width:688px){
+  .content>div{
+    position: relative;
+    margin: 5em;
+    max-width: 20vw;
+  }
+  .content img{
+    width: 15vw;
+    height: auto;
+  }
 }
 
-.content img{
-  width: 15vw;
-  height: auto;
-}
 
 .content .price {
   position: absolute;

@@ -49,7 +49,7 @@ var album2 = {
 var lightsaber1 = {
   id: 'lightsaber_1',
   name: 'Mace Windu Saber',
-  price: '1000 Republic Credits',
+  price: '1000 RC',
   category: 'Jedi Saber',
   picture_url: 'http://www.bladeseller.com/MasterReplicas/images/black/Mace%20lightsaber.jpg',
   selling_points: ['purple!','Samuel L. Jackson', 'Mix of Light and Dark Force Powers'],
@@ -58,7 +58,7 @@ var lightsaber1 = {
 var lightsaber2 = {
   id: 'lightsaber_2',
   name: 'Kylo Ren Claymore',
-  price: '1000 New Republic Credits',
+  price: '1000 NRC',
   category: 'Knight of Ren Saber',
   picture_url: 'https://i.ytimg.com/vi/LDm0EGNhWIo/hqdefault.jpg',
   selling_points: ['Hilt/Exhaust Ports','Now with MORE MENACING sound!', 'Might Explode at any moment'],
