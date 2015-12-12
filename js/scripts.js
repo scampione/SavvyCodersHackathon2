@@ -52,7 +52,19 @@ var books = [book1, book2, book3];
 var music = [album1, album2];
 
 //full products array
-var products = [books, music];
+var products = {books, music};
+
+//create function that takes an array and returns a set of HTML list objects through jQuery
+var sp_lister = function(array) {
+  //set up first element of list
+  var list = $('<li>'+array[0]+'</li>');
+  //.append() subsequent elements from the list
+  for(var i = 1; i < array.length; i++){
+    list = list.append($('<li>'+array[i]+'</li>'));
+  }
+  //return the full jQuery command
+  return list;
+};
 
 //add_to_page function, with an object passed in as a parameter
 var add_to_page = function (item_arr) {
@@ -60,18 +72,6 @@ var add_to_page = function (item_arr) {
   //extract item objects from the item_arr array of items, then continue with rest of function
   for(var j = 0; j < item_arr.length; j++ ){
     var item = item_arr[j];
-
-    //create function that takes an array and returns a set of HTML list objects through jQuery
-    var sp_lister = function(array) {
-      //set up first element of list
-      var list = $('<li>'+array[0]+'</li>');
-      //.append() subsequent elements from the list
-      for(var i = 1; i < array.length; i++){
-        list = list.append($('<li>'+array[i]+'</li>'));
-      }
-      //return the full jQuery command
-      return list;
-    };
 
     //set up jQuery for each object property
     var name = $('<div class="name">').html('<h3>'+item.name+'</h3>');
@@ -91,14 +91,29 @@ var content = function () {
   $('.content').empty();
   //set up items to show based on text content of each link
   if($(this).text() === 'books'){
-    add_to_page(books)
+    add_to_page(products.books)
   } else if ($(this).text() === 'music') {
-    add_to_page(music);
+    add_to_page(products.music);
   } else if ($(this).text() === 'all' || 'HOME'){
-    add_to_page(books);
-    add_to_page(music);
+    add_to_page(products.books);
+    add_to_page(products.music);
   }
 };
+
+//construct dropdown menu from items in products array
+var drop_lister = function (prod_obj) {
+  var item_arr = Object.keys(prod_obj);
+  //set up first element of list
+  var list = $('<li><a href="#">'+item_arr[0]+'</a></li>');
+  //.append() subsequent elements from the list
+  for(var i = 1; i < item_arr.length; i++){
+    list = list.append($('<li><a href="#">'+item_arr[i]+'</a></li>'));
+  }
+  //drop the list into the .drop class with jQuery
+  $('.drop').children('ul').html(list);
+};
+
+drop_lister(products);
 
 //Add click event handlers that show books or music
 $('nav').on('click','a', content);
