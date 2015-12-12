@@ -74,6 +74,12 @@ nav button{
 nav button:hover{
   color: #000000;
 }
+
+nav form{
+  position: absolute;
+  top: 1em;
+  right: 8em;
+}
 /*FOOTER CONTENT STYLES*/
 footer{
   height: 30vh;

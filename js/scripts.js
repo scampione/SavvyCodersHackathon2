@@ -69,6 +69,7 @@ var lightsaber2 = {
 var books = [book1, book2, book3];
 var music = [album1, album2];
 var lightsabers = [lightsaber1, lightsaber2];
+// var all = [].push(books).push(music).push(lightsabers);
 
 //full products array
 var products = {books, music, lightsabers};
@@ -143,4 +144,56 @@ $('.drop').hover(function(){
   $(this).children('ul').slideDown(300);
 },function(argument){
   $(this).children('ul').slideUp(300);
+});
+
+//get list of all of the item names across all product lines
+var name_scraper = function (obj) {
+  var names = [];
+  for(var i in obj){
+    var type = obj[i];
+    for(var j = 0; j < type.length; j++){
+      names.push(type[j].name);
+    }
+  }
+  return names;
+};
+
+
+//search functions
+$('form').submit(function(){
+    event.preventDefault();
+
+    var input = $(this).children('input[type=text]').val();
+    var names = name_scraper(products);
+    var all = [];
+    var all_scraper = function(obj){
+      for(var type in obj){
+          var arr = obj[type];
+          for(var i = 0; i < arr.length; i++){
+            all.push(arr[i]);
+          }
+      }
+    };
+    all_scraper(products);
+
+
+    console.log(all);
+    if(input !== ''){
+      var target_arr = [];
+      for(var i=0; i < names.length; i++){
+        if(!!names[i].match(input)){
+          var target_name = names[i];
+
+          all.forEach(function(item){
+            // console.log('Running on '+item.name);
+            if(item.name === target_name){
+              target_arr.push(item);
+            }
+          });
+        }
+      }
+      add_to_page(target_arr)
+    }
+
+    $(this).children('input[type=text]').val('');
 });
