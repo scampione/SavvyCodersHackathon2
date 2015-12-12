@@ -103,3 +103,10 @@ var content = function () {
 //Add click event handlers that show books or music
 $('nav').on('click','a', content);
 $('footer').on('click','a', content);
+
+//add hover event handler for dropdown menu
+$('.drop').hover(function(){
+  $(this).siblings('ul').slideDown(300);
+},function(argument){
+  $(this).siblings('ul').slideUp(300);
+});

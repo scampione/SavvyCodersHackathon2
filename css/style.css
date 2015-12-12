@@ -28,22 +28,52 @@ nav{
 
 nav ul{
   list-style-type: none;
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+
+  margin: 0;
+  padding: 0;
+
+  width: 10em;
+
+  background-color: #ffffff;
+  box-shadow: 0 0 10px #adadad;
 }
 
 nav li{
-  display: inline;
-  margin-right: 50px;
+  text-align: center;
+  padding: 10px;
 }
 
 nav a{
   text-decoration: none;
-  color: inherit;
+  color: #adadad;
 }
 
 nav a:hover{
-  color: #ffffff;
+  color: #000000;
 }
 
+nav .drop{
+  margin: 1em 2.75em;
+  padding: 3px;
+
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid black;
+
+  background: transparent;
+  cursor: pointer;
+
+  color: #dadada;
+}
+
+nav .drop:hover{
+  color: #000000;
+}
 /*FOOTER CONTENT STYLES*/
 footer{
   height: 30vh;
@@ -140,4 +170,6 @@ h1{
 .wrapper{
   max-width: 960px;
   margin: 0 auto;
+
+  position: relative;
 }
