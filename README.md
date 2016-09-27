@@ -1,2 +1,4 @@
 # Savvy Coders Hackathon \#2
 ## Web Store Hackathon
+
++ Amy Kempen
