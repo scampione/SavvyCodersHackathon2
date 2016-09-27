@@ -4,4 +4,5 @@
 ---
 
 ### Contributors
++ Sam Campione
 + Alex Pearson
