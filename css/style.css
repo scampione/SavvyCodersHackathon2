@@ -39,14 +39,22 @@ form.product-input {
     font-family: fantasy;
     font-size: .9em;
 }
-#book1 .picture_url {
+
+.picture_url {
     height: 100px;
     width: 150px;
 }
 
-#book1 .picture_url img {
+.picture_url img {
     width: 100%;
 
+}
+#book1 {
+    height: 250px;
+    width: 200px;
+    display: block;
+    border: solid 1px #f0f0f0;
+    padding: 5px;
 }
 
 #store-name-area h1 {
