@@ -21,41 +21,46 @@ form.product-input {
 }
 /*put all other styles below this line, please*/
 
-#book1 {
-    height: 250px;
-    width: 200px;
+#content-area {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#content-area > div {
+    width: 300px;
     display: block;
     border: solid 1px #f0f0f0;
     padding: 5px;
+    margin: 0.25rem;
 }
 
-#book1 .name {
+#content-area > div div {
+    margin: 0.25rem;
+}
+
+.name {
     font-family: Arial, sans-serif;
-    font-weight: bold;
-
+    font-size: 1.1rem;
+    color: #3a97e8;
 }
 
-#book1 .author {
-    font-family: fantasy;
+.author {
+    font-family: Arial, sans-serif;;
     font-size: .9em;
+    float: right;
+    margin-bottom: .3rem;
 }
 
-.picture_url {
-    height: 100px;
-    width: 150px;
+.picture-url  {
+    width: 90%;
+    margin: 0 auto;
 }
 
-.picture_url img {
+.picture-url img {
     width: 100%;
+    height: auto;
+}
 
-}
-#book1 {
-    height: 250px;
-    width: 200px;
-    display: block;
-    border: solid 1px #f0f0f0;
-    padding: 5px;
-}
 
 #store-name-area h1 {
     font-size: 2rem;

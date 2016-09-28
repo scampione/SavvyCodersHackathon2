@@ -22,29 +22,29 @@
             <li>Music</li>
         </ul>
     </div>
+    <form class="product-input">
+        <h3>Add a New Product:</h3>
+        <label for="type">Choose a Product Type</label>
+        <input type="radio" name="type" value="book" required checked>Book
+        <input type="radio" name="type" value="music" required>Music
+        <br>
+        <div class="row">
+            <input type="text" name="name" placeholder="Book Name" required>
+            <input type="text" name="pictureUrl" placeholder="http://picture.url.example.com" required>
+            <input type="text" name="author" placeholder="Author Name" required>
+        </div>
+        <br>
+        <div class="row">
+            <input type="number" name="price" placeholder="Price ($)" required>
+            <input type="text" name="selling_points" placeholder="selling point 1">
+            <input type="text" name="selling_points" placeholder="selling point 2">
+            <input type="text" name="selling_points" placeholder="selling point 3">
+            <input type="text" name="selling_points" placeholder="selling point 4">
+            <input type="submit" value="Add A Product">
+        </div>
+    </form>
 
     <div id="content-area">
-        <form class="product-input">
-            <h3>Add a New Product:</h3>
-            <label for="type">Choose a Product Type</label>
-            <input type="radio" name="type" value="book" required checked>Book
-            <input type="radio" name="type" value="music" required>Music
-            <br>
-            <div class="row">
-                <input type="text" name="name" placeholder="Book Name" required>
-                <input type="text" name="picture_url" placeholder="http://picture.url.example.com" required>
-                <input type="text" name="author" placeholder="Author Name" required>
-            </div>
-            <br>
-            <div class="row">
-                <input type="number" name="price" placeholder="Price ($)" required>
-                <input type="text" name="selling_points" placeholder="selling point 1">
-                <input type="text" name="selling_points" placeholder="selling point 2">
-                <input type="text" name="selling_points" placeholder="selling point 3">
-                <input type="text" name="selling_points" placeholder="selling point 4">
-                <input type="submit" value="Add A Product">
-            </div>
-        </form>
     </div>
 
     <div id="footer">

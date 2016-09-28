@@ -9,8 +9,8 @@ var book1 = {
     "name": "JavaScript - The Good Parts",
     "author":"Dough Crawford",
     "price":12.00,
-    "picture_url":"https://images-na.ssl-images-amazon.com/images/I/5166ztxOm9L._SX381_BO1,204,203,200_.jpg",
-    "selling_points":["Best javascript book of 2016","Great example code"]
+    "pictureUrl":"https://images-na.ssl-images-amazon.com/images/I/5166ztxOm9L._SX381_BO1,204,203,200_.jpg",
+    "sellingPoints":["Best javascript book of 2016","Great example code"]
 };
 
 var book2 = {
@@ -19,8 +19,8 @@ var book2 = {
     "name":"Exploring ReactJS",
     "author":"Edward Smith",
     "price":19.99,
-    "picture_url":"http://reactkungfu.com/assets/images/rbe-cover.png",
-    "selling_points":["Great book for beginners"]
+    "pictureUrl":"http://reactkungfu.com/assets/images/rbe-cover.png",
+    "sellingPoints":["Great book for beginners"]
 };
 
 var album1 = {
@@ -29,8 +29,8 @@ var album1 = {
     "name":"Nevermind",
     "author":"Nirvana",
     "price":15.00,
-    "picture_url":"https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg",
-    "selling_points":["point 1","point 2"]
+    "pictureUrl":"https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg",
+    "sellingPoints":["point 1","point 2"]
 };
 
 var album2 = {
@@ -39,8 +39,8 @@ var album2 = {
     "name":"A Moon-Shaped Pool",
     "author":"Radiohead",
     "price":12.95,
-    "picture_url":"http://cdn.pitchfork.com/albums/23244/e3c43867.jpg",
-    "selling_points":["point 1", "point 2", "point 3"]
+    "pictureUrl":"http://cdn.pitchfork.com/albums/23244/e3c43867.jpg",
+    "sellingPoints":["point 1", "point 2", "point 3"]
 };
 
 var addToPage = function( productObject ){
@@ -51,14 +51,14 @@ var addToPage = function( productObject ){
 
     $target.append( "<div class='name'>" + productObject.name + "</div>" );
     $target.append( "<div class='author'>" + productObject.author + "</div>" );
-    $target.append( $( "<div class='picture_url'></div>").html( "<img src='" + productObject.picture_url + "'>" ) );
+    $target.append( $( "<div class='picture-url'></div>").html( "<img src='" + productObject.pictureUrl + "'>" ) );
     $target.append( "<div class='price'>" + productObject.price + "</div>" );
-    $target.append( "<div class='selling_points'></div>" );
+    $target.append( "<ul class='selling-points'></ul>" );
 
-    $sellingPoints = $target.find( ".selling_points" );
+    $sellingPoints = $target.find( ".selling-points" );
 
-    while( i < productObject.selling_points.length ){
-        $sellingPoints.append( "<li>" + productObject.selling_points[i] + "</li>");
+    while( i < productObject.sellingPoints.length ){
+        $sellingPoints.append( "<li>" + productObject.sellingPoints[i] + "</li>");
         i++;
     }
 };
@@ -77,10 +77,10 @@ $( "form" ).on( "submit", function( event ){
     var formObject = {};
 
     formObject.id = ++count;
-    formObject.selling_points = [];
+    formObject.sellingPoints = [];
     data.forEach( function( field ){
         if( field.name === "selling_points" ){
-            formObject.selling_points.push( field.value );
+            formObject.sellingPoints.push( field.value );
         } else{
             formObject[ field.name ] = field.value;
         }
