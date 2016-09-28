@@ -5,3 +5,15 @@ html {
 }
 
 /*put all other styles below this line, please*/
+
+/*
+book-related css
+*/
+
+#book-container {
+    height: 250px;
+    width: 200px;
+    border: solid 1px #f0f0f0;
+    padding: 5px;
+    background-image: url("http://placehold.it/200x250");
+}
