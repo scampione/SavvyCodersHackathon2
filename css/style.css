@@ -4,4 +4,15 @@ html {
   box-sizing: border-box;
 }
 
+form {
+    width: 90%;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+form.product-input {
+    border-radius: 0.5rem;
+    border: 1px solid lightgrey;
+    padding: 0.5rem;
+}
 /*put all other styles below this line, please*/

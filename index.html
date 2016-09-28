@@ -12,6 +12,25 @@
     <body>
 
 
+
+        <form class="product-input">
+            <h3>Add a New Product:</h3>
+            <label for="type">Choose a Product Type</label>
+            <input type="radio" name="type" value="book" required checked>Book
+            <input type="radio" name="type" value="music" required>Music
+            <br>
+            <div class="row">
+                <input type="text" name="name" placeholder="Book Name" required>
+                <input type="text" name="picture_url" placeholder="http://picture.url.example.com" required>
+                <input type="text" name="author" placeholder="Author Name" required>
+            </div>
+            <br>
+            <div class="row">
+                <input type="number" name="price" placeholder="Price ($)" required>
+                <input type="textarea" name="selling_points" placeholder="selling points">
+                <input type="submit" value="Add A Product">
+            </div>
+        </form>
         <!-- all HTML content goes above this line -->
         <!-- connected libraries -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
