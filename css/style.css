@@ -31,31 +31,33 @@ form.product-input {
 
 #book1 .name {
     font-family: Arial, sans-serif;
-    font-weight: bold;
+    font-size: 1.1rem;
+    color: #3a97e8;
+
 
 }
 
 #book1 .author {
-    font-family: fantasy;
+    font-family: Arial, sans-serif;;
     font-size: .9em;
+    float: right;
+    margin-bottom: .3rem;
 }
 
-.picture_url {
-    height: 100px;
-    width: 150px;
+.picture-url  {
+    height: 75%;
+    width: 90%;
+    border: solid 1px red;
+    
 }
 
-.picture_url img {
+.picture-url img {
     width: 100%;
+    height: 100%;
+    border: solid 1px blue;
 
 }
-#book1 {
-    height: 250px;
-    width: 200px;
-    display: block;
-    border: solid 1px #f0f0f0;
-    padding: 5px;
-}
+
 
 #store-name-area h1 {
     font-size: 2rem;
