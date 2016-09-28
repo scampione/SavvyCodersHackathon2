@@ -1,6 +1,7 @@
 // Put all of your jQuery and JavaScript in this document.
 
-var itemCount;
+var numberOfPoints;
+
 
 var book1 = {
     "id":1,
@@ -55,3 +56,6 @@ var addToPage = function( productObject, targetId ){
 };
 
 addToPage( book1, "book1" );
+addToPage( book2, "book2" );
+addToPage( album1, "album1" );
+addToPage( album2, "album2" );
