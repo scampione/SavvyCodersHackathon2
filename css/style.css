@@ -16,3 +16,45 @@ form.product-input {
     padding: 0.5rem;
 }
 /*put all other styles below this line, please*/
+
+#store-name-area h1 {
+    font-size: 2rem;
+    font-family: "Georgia", "Times New Roman", serif;
+    color: #087fa1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+#store-name-area {
+    background-color: #eaeaea;
+}
+
+#nav-bar{
+    width: 100%;
+    background-color: #087fa1;
+}
+
+#nav-bar ul {
+    display: flex;
+    font-size: 1rem;
+    font-family: "Helvetica", sans-serif;
+    color: #ffffff;
+}
+
+#nav-bar li {
+    padding: 10px;
+}
+
+#footer {
+    width: 100%;
+    background-color: #b8b8b8;
+}
+
+#footer ul {
+    display: flex;
+}
+
+#footer li {
+    padding: 10px;
+}
