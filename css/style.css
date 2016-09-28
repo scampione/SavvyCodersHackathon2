@@ -29,6 +29,16 @@ form.product-input {
     padding: 5px;
 }
 
+#book1 .name {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+
+}
+
+#book1 .author {
+    font-family: fantasy;
+    font-size: .9em;
+}
 #book1 .picture_url {
     height: 100px;
     width: 150px;
