@@ -46,7 +46,6 @@ var addToPage = function( productObject ){
     $( "#content-area" ).append( "<div id='" + productObject.type + productObject.id + "'></div>" );
     var $target = $( "#" + productObject.type + productObject.id );
     var $sellingPoints;
-    var i = 0;
 
     $target.append( "<div class='name'>" + productObject.name + "</div>" );
     $target.append( "<div class='author'>" + productObject.author + "</div>" );
@@ -56,10 +55,9 @@ var addToPage = function( productObject ){
 
     $sellingPoints = $target.find( ".selling-points" );
 
-    while( i < productObject.sellingPoints.length ){
-        $sellingPoints.append( "<li>" + productObject.sellingPoints[i] + "</li>");
-        i++;
-    }
+    productObject.sellingPoints.forEach( function( sellingPoint ){
+        $sellingPoints.append( "<li>" + sellingPoint + "</li>" );
+    } );
 };
 
 addToPage( book1 );
