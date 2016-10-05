@@ -19,7 +19,7 @@ var book2 = {
     "author":"Edward Smith",
     "price":19.99,
     "pictureUrl":"http://reactkungfu.com/assets/images/rbe-cover.png",
-    "sellingPoints":["Great book for beginners"]
+    "sellingPoints":["Great book for beginners","Former FaceBook employee shares his secrets"]
 };
 
 var album1 = {
@@ -42,6 +42,8 @@ var album2 = {
     "sellingPoints":["point 1", "point 2", "point 3"]
 };
 
+
+
 var addToPage = function( productObject ){
     $( "#content-area" ).append( "<div id='" + productObject.type + productObject.id + "'></div>" );
     var $target = $( "#" + productObject.type + productObject.id );
@@ -60,10 +62,11 @@ var addToPage = function( productObject ){
     } );
 };
 
-addToPage( book1 );
-addToPage( book2 );
-addToPage( album1 );
-addToPage( album2 );
+
+
+products.forEach(function(product) {
+    addToPage(product);
+})
 
 var count = 4;
 
