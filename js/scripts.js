@@ -2,7 +2,6 @@
 
 var numberOfPoints;
 
-
 var book1 = {
     "id":1,
     "type": "book",
