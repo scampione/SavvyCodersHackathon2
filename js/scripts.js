@@ -67,15 +67,13 @@ products.forEach(function(product) {
     addToPage(product);
 })
 
-var count = 4;
-
 $( "form" ).on( "submit", function( event ){
     event.preventDefault();
 
     var data = $( this ).serializeArray();
     var formObject = {};
 
-    formObject.id = ++count;
+    formObject.id = products.length + 1;
     formObject.sellingPoints = [];
     data.forEach( function( field ){
         if( field.name === "selling_points" ){
@@ -86,4 +84,5 @@ $( "form" ).on( "submit", function( event ){
     } );
 
     addToPage( formObject );
+    products.push( formObject );
 });
