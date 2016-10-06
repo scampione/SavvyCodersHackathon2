@@ -61,11 +61,13 @@ var addToPage = function( productObject ){
     } );
 };
 
+for (var type in products) {
+    products[type].forEach(function(product) {
+        addToPage(product);
+    } );
+}
 
 
-products.forEach(function(product) {
-    addToPage(product);
-})
 
 $( "form" ).on( "submit", function( event ){
     event.preventDefault();
