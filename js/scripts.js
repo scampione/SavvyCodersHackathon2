@@ -2,45 +2,44 @@
 
 var numberOfPoints;
 
-var book1 = {
-    "id":1,
-    "type": "book",
-    "name": "JavaScript - The Good Parts",
-    "author":"Dough Crawford",
-    "price":12.00,
-    "pictureUrl":"https://images-na.ssl-images-amazon.com/images/I/5166ztxOm9L._SX381_BO1,204,203,200_.jpg",
-    "sellingPoints":["Best javascript book of 2016","Great example code"]
-};
-
-var book2 = {
-    "id":2,
-    "type": "book",
-    "name":"Exploring ReactJS",
-    "author":"Edward Smith",
-    "price":19.99,
-    "pictureUrl":"http://reactkungfu.com/assets/images/rbe-cover.png",
-    "sellingPoints":["Great book for beginners","Former FaceBook employee shares his secrets"]
-};
-
-var album1 = {
-    "id":3,
-    "type": "album",
-    "name":"Nevermind",
-    "author":"Nirvana",
-    "price":15.00,
-    "pictureUrl":"https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg",
-    "sellingPoints":["point 1","point 2"]
-};
-
-var album2 = {
-    "id":4,
-    "type": "album",
-    "name":"A Moon-Shaped Pool",
-    "author":"Radiohead",
-    "price":12.95,
-    "pictureUrl":"http://cdn.pitchfork.com/albums/23244/e3c43867.jpg",
-    "sellingPoints":["point 1", "point 2", "point 3"]
-};
+var products = [
+    {
+        "id":1,
+        "type": "book",
+        "name": "JavaScript - The Good Parts",
+        "author":"Dough Crawford",
+        "price":12.00,
+        "pictureUrl":"https://images-na.ssl-images-amazon.com/images/I/5166ztxOm9L._SX381_BO1,204,203,200_.jpg",
+        "sellingPoints":["Best javascript book of 2016","Great example code"]
+    },
+    {
+        "id":2,
+        "type": "book",
+        "name":"Exploring ReactJS",
+        "author":"Edward Smith",
+        "price":19.99,
+        "pictureUrl":"http://reactkungfu.com/assets/images/rbe-cover.png",
+        "sellingPoints":["Great book for beginners", "Former Facebook employee shares his secrets!"]
+    },
+    {
+        "id":3,
+        "type": "album",
+        "name":"Nevermind",
+        "author":"Nirvana",
+        "price":15.00,
+        "pictureUrl":"https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg",
+        "sellingPoints":["point 1","point 2"]
+    },
+    {
+        "id":4,
+        "type": "album",
+        "name":"A Moon-Shaped Pool",
+        "author":"Radiohead",
+        "price":12.95,
+        "pictureUrl":"http://cdn.pitchfork.com/albums/23244/e3c43867.jpg",
+        "sellingPoints":["point 1", "point 2", "point 3"]
+    }
+]
 
 
 
